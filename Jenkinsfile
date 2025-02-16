@@ -56,7 +56,7 @@ pipeline {
                             sudo docker rm $CONTAINER_NAME || true;
                         
                             echo \"Running new container...\";
-                            sudo docker run -d --name $CONTAINER_NAME -p 3000:3000 $IMAGE_NAME;
+                            sudo docker run -d --name $CONTAINER_NAME -p 3000:3000 --env-file .env $IMAGE_NAME;
                         '"
                         """
                     }
