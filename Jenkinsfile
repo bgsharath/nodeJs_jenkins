@@ -22,7 +22,7 @@ pipeline {
             }
         }
         
-        /*stage('Login to Docker Hub') {
+        stage('Login to Docker Hub') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh 'echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin'
@@ -42,7 +42,7 @@ pipeline {
             }
         }
         
-        stage('Deploy to AWS EC2') {
+        /*stage('Deploy to AWS EC2') {
             steps {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: 'ec2-ssh-key', keyFileVariable: 'SSH_KEY')]) {
