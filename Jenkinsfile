@@ -6,6 +6,7 @@ pipeline {
         CONTAINER_NAME = 'nodejs-container-jenkins'
         EC2_USER = 'ubuntu'  // Change for Amazon Linux (ec2-user)
         EC2_HOST = '3.110.44.255'
+        PATH = "/usr/local/bin:$PATH"
     }
 
     stages {
