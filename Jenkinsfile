@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = 'sharathbg/nodejs-jenkins'
         CONTAINER_NAME = 'nodejs-container-jenkins'
         EC2_USER = 'ubuntu'  // Change for Amazon Linux (ec2-user)
-        EC2_HOST = '3.109.153.65'
+        EC2_HOST = '13.235.67.161'
     }
 
     stages {
