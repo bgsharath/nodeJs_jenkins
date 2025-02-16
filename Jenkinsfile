@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = 'sharathbg/nodejs-jenkins'
         CONTAINER_NAME = 'nodejs-container-jenkins'
         EC2_USER = 'ubuntu'  // Change for Amazon Linux (ec2-user)
-        EC2_HOST = '3.110.44.255'
+        EC2_HOST = '13.203.155.169'
         PATH = "/usr/local/bin:$PATH"
     }
 
@@ -42,7 +42,7 @@ pipeline {
             }
         }
         
-        /*stage('Deploy to AWS EC2') {
+        stage('Deploy to AWS EC2') {
             steps {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: 'ec2-ssh-key', keyFileVariable: 'SSH_KEY')]) {
@@ -62,6 +62,6 @@ pipeline {
                     }
                 }
             }
-        }*/
+        }
     }
 }
