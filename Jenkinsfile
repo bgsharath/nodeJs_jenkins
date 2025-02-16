@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = 'sharathbg/nodejs-jenkins'
         CONTAINER_NAME = 'nodejs-container-jenkins'
         EC2_USER = 'ubuntu'  // Change for Amazon Linux (ec2-user)
-        EC2_HOST = '13.235.67.161'
+        EC2_HOST = '3.110.44.255'
     }
 
     stages {
@@ -21,7 +21,7 @@ pipeline {
             }
         }
         
-        stage('Login to Docker Hub') {
+        /*stage('Login to Docker Hub') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh 'echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin'
@@ -61,6 +61,6 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
     }
 }
